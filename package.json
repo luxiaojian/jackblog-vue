@@ -6,7 +6,9 @@
     "start": "gulp serve",
     "build": "gulp build",
     "pm2-start": "pm2 start process.json",
-    "pm2-restart": "pm2 restart process.json"
+    "pm2-restart": "pm2 restart process.json",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -67,7 +69,9 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "pm2": "^1.0.2",
-    "serve-favicon": "^2.3.0"
-  }
+    "pm2": "^2.1.6",
+    "serve-favicon": "^2.3.0",
+    "snyk": "^1.31.0"
+  },
+  "snyk": true
 }
